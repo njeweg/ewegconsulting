@@ -33,7 +33,7 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
             backdrop-filter: blur(10px);
         }
@@ -114,6 +114,56 @@
             align-items: center;
         }
 
+        .about {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .contact h2 {
+            font-size: 1.8em;
+            color: #1e3c72;
+            margin: 40px 0 20px;
+            font-weight: 400;
+        }
+
+        .info-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1em;
+            color: #1e3c72;
+            text-decoration: none;
+            padding: 18px 35px;
+            border: 2px solid #1e3c72;
+            border-radius: 50px;
+            background: white;
+            transition: all 0.3s ease;
+            text-align: left;
+            min-width: 300px;
+        }
+
+        .info-button.clickable:hover {
+            background: #1e3c72;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(30, 60, 114, 0.3);
+        }
+
+        .info-label {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-bottom: 2px;
+        }
+
+        .info-text {
+            font-size: 1em;
+            font-weight: 500;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 40px 30px;
@@ -123,9 +173,19 @@
                 font-size: 2.5em;
             }
 
-            .email {
+            .email, .linkedin {
                 font-size: 1em;
                 padding: 15px 25px;
+            }
+
+            .info-button {
+                font-size: 0.9em;
+                padding: 15px 25px;
+                min-width: 250px;
+            }
+
+            .info-text {
+                font-size: 0.95em;
             }
         }
     </style>
@@ -134,8 +194,33 @@
     <div class="container">
         <h1>Eweg Consulting</h1>
         <div class="divider"></div>
+        
+        <div class="about">
+            <p>Eweg Consulting specializes in Data Science and Machine Learning solutions for the financial sector. We partner with banks and insurance companies to develop advanced models for risk management and financial crime detection, helping institutions make data-driven decisions and strengthen their compliance frameworks.</p>
+        </div>
+        
         <div class="contact">
+            <h2>Contact</h2>
+            
             <div class="social-links">
+                <div class="info-button">
+                    <svg class="email-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <div>
+                        <div class="info-label">Address</div>
+                        <div class="info-text">De Ruyterlaan 26, 3941WR, Doorn</div>
+                    </div>
+                </div>
+                <a href="tel:+31626151479" class="info-button clickable">
+                    <svg class="email-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                    </svg>
+                    <div>
+                        <div class="info-label">Phone</div>
+                        <div class="info-text">+31 6 26151479</div>
+                    </div>
+                </a>
                 <a href="mailto:ewegconsulting@gmail.com" class="email">
                     <svg class="email-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
